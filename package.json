@@ -11,6 +11,14 @@
     "response-type",
     "http"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Janinf/npm-packages-ibm-cloud-functions-response-builder"
+  },
+  "bugs": {
+    "url": "https://github.com/Janinf/npm-packages-ibm-cloud-functions-response-builder/issues"
+  },
   "author": "Jan Armbruster",
-  "license": "MIT"
+  "license": "MIT",
+  "homepage": "https://github.com/Janinf/npm-packages-ibm-cloud-functions-response-builder/blob/master/README.md"
 }
