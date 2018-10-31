@@ -11,7 +11,7 @@ return res.status(404).json({error: {status: 404, message: 'No item with id 3 ex
 
 With that the call of an api endpoint using this function will return something like this:
 
-![response_example](https://github.com/Janinf/npm-packages-ibm-cloud-functions-response-builder/blob/master/docs/images/response_example.png)
+![response_example](https://github.com/Janinf/npm-packages-ibm-cloud-functions-response-builder/blob/master/docs/images/response_example.PNG)
 
 A handler function for a ibmcloud action would normally look like this:
 
