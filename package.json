@@ -1,6 +1,6 @@
 {
-  "name": "ibm-cloud-functions-response-builder",
-  "version": "1.0.0",
+  "name": "openwhisk-response-action",
+  "version": "2.0.0",
   "description": "Provides a builder class for http responses for the ibmcloud functions response type http",
   "main": "index.js",
   "keywords": [
