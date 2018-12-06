@@ -25,8 +25,21 @@ const builder = {
 
 /**
  * Takes params of the ibmcloud function and puts it with a new response object into the handler function
- * @param {*} params Parameters given to ibmcloud function
- * @param {function} handler Function handling input parameters and defining function output
+ * @param {function} handle Function handling input parameters and defining function output
  * @returns {Response} The handler function should return a response object
  */
-module.exports = (params, handler) => handler(params, builder.res());
+module.exports = handle => async params => {
+    const res = builder.res()
+    const {err, locals} = params
+    delete params.locals
+    if (err) {
+        const {status, message} = err
+        return res.toError(status, status === 500 ? 'Internal Server Error' : message)
+    }
+    try {
+        return await handle(params, locals, res)
+    } catch(e) {
+        console.error(e)
+        return res.toError(500, 'Internal Server Error')
+    }
+};
