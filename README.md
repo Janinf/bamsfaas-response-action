@@ -1,4 +1,4 @@
-# npm-packages-ibm-cloud-functions-response-builder
+# openwhisk-response-action
 Provides a builder class for http responses for the ibmcloud functions response type http in a serverless framework handler.
 
 # How it works
@@ -30,12 +30,12 @@ module.exports.handler = params => {
 }
 ```
 
-The builder can be integrated into this format like this:
+The action can be integrated into this format like this:
 
 ```
-const builder = require('ibm-cloud-functions-response-builder');
+const action = require('openwhisk-response-action');
 
-module.exports = params => builder(params, (params, res) => {
+module.exports.handler = action((params, locals, res) => {
     ...
     return res.status(404).json({error: {status: 404, message: 'No item with id 3 exists'}})
 })
@@ -44,15 +44,13 @@ module.exports = params => builder(params, (params, res) => {
 Or even shorter like this:
 
 ```
-const builder = require('ibm-cloud-functions-response-builder');
+const action = require('openwhisk-response-action');
 
-module.exports = params => builder(params, (params, res) => {
+module.exports.handler = action((params, locals, res) => {
     ...
     return res.toError(404, 'No item with id 3 exists')
 })
 ```
-
-I prefer code like this. Of course you can disagree, so just use this if you like it.
 
 # Default Values
 The default status code is 200 (OK) while body and headers are empty by default.
