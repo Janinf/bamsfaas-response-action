@@ -37,7 +37,7 @@ module.exports = handle => async params => {
         return res.toError(status, status === 500 ? 'Internal Server Error' : message)
     }
     try {
-        return await handle(params, locals, res)
+        return await handle(params, locals ? locals : {}, res)
     } catch(e) {
         console.error(e)
         return res.toError(500, 'Internal Server Error')
