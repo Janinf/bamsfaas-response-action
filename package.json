@@ -1,6 +1,6 @@
 {
   "name": "@bamsfaas/response-action",
-  "version": "2.0.1",
+  "version": "2.0.2",
   "description": "Provides a builder class for http responses for the ibmcloud functions response type http",
   "main": "index.js",
   "keywords": [
