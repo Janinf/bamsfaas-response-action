@@ -1,5 +1,5 @@
 {
-  "name": "openwhisk-response-action",
+  "name": "@bamsfaas/response-action",
   "version": "2.0.1",
   "description": "Provides a builder class for http responses for the ibmcloud functions response type http",
   "main": "index.js",
@@ -13,12 +13,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Janinf/npm-packages-ibm-cloud-functions-response-builder"
+    "url": "git+https://github.com/Janinf/bamsfaas-response-action"
   },
   "bugs": {
-    "url": "https://github.com/Janinf/npm-packages-ibm-cloud-functions-response-builder/issues"
+    "url": "https://github.com/Janinf/bamsfaas-response-action/issues"
   },
   "author": "Jan Armbruster",
   "license": "MIT",
-  "homepage": "https://github.com/Janinf/npm-packages-ibm-cloud-functions-response-builder/blob/master/README.md"
+  "homepage": "https://github.com/Janinf/bamsfaas-response-action/blob/master/README.md"
 }
